@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAOS OUTING ALRAJA 2024</title>
+<style>
+body {
+  background-color: black;
+  text-align: center;
+  padding: 40px 0 0 0; 
+}
+
+.depan{
+  width: 100%;
+  margin-top: -40rem;
+  position: relative;
+}
+
+#image {
+  width: 100%;
+}
+
+input[type="range"] {
+  margin-top: 50px;
+  width: 40rem;
+}
+</style>
+</head>
+<body>
+<img id="image" src="assets/img/KAOSOUTING23PUTIH1.svg" alt="SVG Image">
+<input type="range" min="0" max="360" value="0" id="hueSlider">
+<script>
+const hueSlider = document.getElementById('hueSlider');
+const image = document.getElementById('image');
+
+hueSlider.addEventListener('input', function() {
+  const hue = this.value;
+  image.style.filter = `hue-rotate(${hue}deg)`;
+});
+</script>
+</body>
+</html>
